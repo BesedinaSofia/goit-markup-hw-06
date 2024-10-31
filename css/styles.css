@@ -187,25 +187,6 @@ button {
   }
 }
 
-@media screen and (min-width: 1158px) {
-  .header-logo {
-    margin-right: 76px;
-  }
-
-  .nav-menu_reverse {
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .nav-second {
-    padding: 24px 0;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-  }
-}
-
 /* mobile menu */
 
 .mobile-menu {
@@ -444,6 +425,26 @@ button {
   }
 }
 
+@media screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .nav-menu_reverse {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-second {
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
 /* section 2 */
 .container {
   max-width: 320px;
@@ -556,6 +557,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
 }
 
 .card_title {
@@ -659,14 +661,14 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-  .description_list {
+  .team-list {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 24px;
   }
 
-  .description_list .item {
+  .team-list .team_page {
     width: calc((100% - 3 * 24px) / 4);
   }
 }
@@ -775,15 +777,16 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-  .description_list {
+  .card-setp {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 24px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
   }
 
-  .description_list .item {
-    width: calc((100% - 3 * 24px) / 4);
+  .card-setp .portfolio-item {
+    flex-basis: calc((100% - 48px) / 3);
   }
 }
 
@@ -947,25 +950,17 @@ a.flink {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
-  }
-
-  .form-footer {
-    flex-direction: row;
-  }
-
-  .containerf {
-    display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .bthsub {
-    margin: 0;
   }
 
   .form-footer {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .bthsub {
+    margin: 0;
   }
 
   .subscribe {
@@ -987,10 +982,11 @@ a.flink {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 24px;
+    align-items: baseline;
   }
 
   .containerf .item {
-    width: calc((100% - 3 * 24px) / 4);
+    flex-basis: calc((100% - 3 * 24px) / 4);
   }
 }
 

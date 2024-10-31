@@ -54,27 +54,6 @@ button {
   overflow: hidden;
 }
 
-/* common */
-
-.container {
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-    padding: 0 15px;
-  }
-}
-
 /*header*/
 
 .header {
@@ -367,7 +346,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/people-office.jpg");
+    url("../images/mobile/bgmob.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -413,9 +392,24 @@ button {
   background-color: #404bbf;
 }
 
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/mobile/bgmob2x.jpg");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/ipad/bgipad1.jpg");
   }
 
   .title {
@@ -425,9 +419,24 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/ipad/bgipad2.jpg");
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .hero {
     max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office.jpg");
   }
 
   title {
@@ -436,6 +445,13 @@ button {
 }
 
 /* section 2 */
+.container {
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .section_two {
   padding: 72px 0;
 }
@@ -562,6 +578,8 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   flex-basis: calc((100% - 72px) / 4);
   margin-bottom: 72px;
+
+  max-width: 264px;
 }
 
 .icon_list {
@@ -629,15 +647,14 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-  }
 
-  .team_page {
-    margin: 72px auto;
+    justify-content: center;
   }
 
   .team-list .team_page {
     flex-basis: calc((100% - 10px) / 2);
-    max-width: 264px;
+    margin-bottom: 64px;
+    margin-right: 24px;
   }
 }
 
@@ -672,7 +689,7 @@ button {
   margin-bottom: 72px;
 }
 
-.card-set {
+.card-setp {
   display: flex;
   flex-direction: column;
 }
@@ -743,16 +760,17 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .card-set {
+  .card-setp {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  .team-list .team_page {
+  .card-setp .portfolio-item {
     flex-basis: calc((100% - 10px) / 2);
-    max-width: 264px;
+
+    margin-bottom: 72px;
   }
 }
 
@@ -784,7 +802,12 @@ button {
   color: #404bbf;
 }
 
-.link-third {
+a.flink {
+  display: flex;
+  justify-content: center;
+}
+
+.flink {
   font-weight: 700;
   font-size: 18px;
   line-height: 117%;
@@ -816,14 +839,17 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  display: flex;
+
   margin-bottom: 16px;
+
+  display: flex;
+  justify-content: center;
 }
 
 .icon_listf {
   display: flex;
+  justify-content: center;
   gap: 16px;
-  margin-right: 80px;
   margin-bottom: 72px;
 }
 
@@ -860,12 +886,14 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .form-footer {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  align-items: center;
 }
 
 .form-labelf {
@@ -924,6 +952,33 @@ button {
   .form-footer {
     flex-direction: row;
   }
+
+  .containerf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bthsub {
+    margin: 0;
+  }
+
+  .form-footer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .subscribe {
+    justify-content: start;
+  }
+
+  .socialmedia {
+    justify-content: start;
+  }
+
+  a.flink {
+    justify-content: start;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -936,6 +991,29 @@ button {
 
   .containerf .item {
     width: calc((100% - 3 * 24px) / 4);
+  }
+}
+
+/* common */
+.container {
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
